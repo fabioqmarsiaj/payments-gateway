@@ -24,3 +24,7 @@ func (t *Transaction) IsValid() error {
 	}
 	return nil
 }
+
+func (t *Transaction) SetCreditCard(card CreditCard) {
+	t.CreditCard = card
+}

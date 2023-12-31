@@ -16,15 +16,16 @@ export class OrdersService {
     return this.orderModule.findAll();
   }
 
-  findOne(id: number) {
+  findOne(id: string) {
     return this.orderModule.findByPk(id);
   }
 
-  update(id: string, updateOrderDto: UpdateOrderDto) {
-    return `This action updates a #${id} order`;
+  async update(id: string, updateOrderDto: UpdateOrderDto) {
+    const order = await this.findOne(id);
+    return order.update(updateOrderDto);
   }
 
-  remove(id: number) {
+  remove(id: string) {
     return `This action removes a #${id} order`;
   }
 }

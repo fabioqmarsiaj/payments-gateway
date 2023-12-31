@@ -9,3 +9,15 @@ Content-Type: application/json
     "credit_card_number": "123",
     "credit_card_name": "Fabio Marsiaj"
 }
+
+###
+GET http://localhost:3000/orders/44e48c20-2458-40bf-aa6d-e6cce64f6705
+
+
+###
+PATCH http://localhost:3000/orders/44e48c20-2458-40bf-aa6d-e6cce64f6705
+Content-Type: application/json
+
+{
+    "credit_card_name": "João Bodalhoco"
+}
